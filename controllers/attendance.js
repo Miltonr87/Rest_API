@@ -1,11 +1,12 @@
+const Attendance = require('../models/attendance')
+
 module.exports = app => {
-    app.get('/attendance', (req, res) => res.send('you are on attendance rout with GET method'))
+    app.get('/attendance', (req, res) => res.send('<h3>You are on attendance rout with GET method</h3>'))
 
     app.post('/attendance', (req, res) => {
-        console.log('Attendance send')
-        console.log(req.body)
+        const attendance = req.body
+
+        Attendance.addData(attendance)
         res.send('Post Attendance')
     })
-     
-     
 }

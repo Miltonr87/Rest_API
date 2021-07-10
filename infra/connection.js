@@ -5,7 +5,7 @@ const connection = mysql.createConnection({
     port: 3306,
     user: 'root',
     password: 'yes', // changed for my personal access
-    database: 'new_schema'
+    database: 'notepad'
 });
 
 module.exports = connection;
